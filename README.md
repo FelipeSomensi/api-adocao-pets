@@ -1,1 +1,1 @@
-Prova 2 displina de Desenvolvimento de Interfaces Web
+Prova 2 disciplina de Desenvolvimento de Interfaces Web
