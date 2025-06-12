@@ -1,0 +1,36 @@
+-- Criação do banco de dados
+CREATE DATABASE IF NOT EXISTS pets_db;
+USE pets_db;
+
+-- Criação da tabela users
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL, -- Para comportar hash com bcrypt
+    phone VARCHAR(20),
+    role ENUM('admin', 'adopter') NOT NULL
+);
+
+-- Criação da tabela pets
+CREATE TABLE pets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT,
+    species VARCHAR(50),
+    size ENUM('small', 'medium', 'large'),
+    status ENUM('available', 'adopted') DEFAULT 'available',
+    description TEXT
+);
+
+INSERT INTO pets (name, age, species, size, status, description) VALUES
+('Thor', 3, 'Cachorro', 'large', 'available', 'Cão de grande porte, muito brincalhão e dócil.'),
+('Luna', 2, 'Gato', 'small', 'available', 'Gata preta muito carinhosa, ideal para apartamentos.'),
+('Milo', 1, 'Coelho', 'small', 'adopted', 'Coelhinho branco, ótimo para crianças.'),
+('Rex', 5, 'Cachorro', 'medium', 'available', 'Mestiço, muito obediente e já castrado.'),
+('Nina', 4, 'Gato', 'small', 'adopted', 'Gata siamesa, adora colo e é muito sociável.'),
+('Pipoca', 2, 'Hamster', 'small', 'available', 'Pequeno e muito ativo, adora correr na rodinha.'),
+('Bobby', 6, 'Cachorro', 'large', 'available', 'Pastor alemão treinado, ótimo cão de guarda.'),
+('Mimi', 3, 'Gato', 'small', 'available', 'Gatinha tricolor, adora brincar com bolinhas.'),
+('Tico', 2, 'Pássaro', 'small', 'available', 'Canário amarelo, canta bastante.'),
+('Lola', 1, 'Cachorro', 'medium', 'available', 'Filhote de vira-lata muito dócil e inteligente.');

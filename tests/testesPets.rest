@@ -1,0 +1,9 @@
+@baseURL = http://localhost:3000/pets
+### 🔹 Listar todos os jogadores
+
+GET {{baseURL}}
+Content-Type: application/json
+
+### 🔹 Listar todos os jogadores disponiveis
+GET {{baseURL}}/available
+Content-Type: application/json
