@@ -7,3 +7,38 @@ Content-Type: application/json
 ### 🔹 Listar todos os jogadores disponiveis
 GET {{baseURL}}/available
 Content-Type: application/json
+
+### 🔹 Buscar um jogo por ID
+GET {{baseURL}}/1
+Content-Type: application/json
+
+
+### 🔸 Adicionar um novo pet
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+  "name": "Bolinha",
+  "age": 2,
+  "species": "Gato",
+  "size": "small",
+  "status": "available",
+  "description": "Gato branco muito brincalhão."
+}
+
+### 🔸 Atualizar um pet existente (ID = 1)
+PUT {{baseURL}}/1
+Content-Type: application/json
+
+{
+  "name": "Thor",
+  "age": 4,
+  "species": "Cachorro",
+  "size": "large",
+  "status": "adopted",
+  "description": "Cão grande, dócil e adotado recentemente."
+}
+
+### 🔸 Deletar um pet (ID = 1)
+DELETE {{baseURL}}/1
+Content-Type: application/json
