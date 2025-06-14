@@ -18,7 +18,7 @@ POST {{baseURL}}
 Content-Type: application/json
 
 {
-  "name": "Bolinha",
+  "name": "Miurso",
   "age": 2,
   "species": "Gato",
   "size": "small",
@@ -40,5 +40,5 @@ Content-Type: application/json
 }
 
 ### 🔸 Deletar um pet (ID = 1)
-DELETE {{baseURL}}/1
+DELETE {{baseURL}}/14
 Content-Type: application/json

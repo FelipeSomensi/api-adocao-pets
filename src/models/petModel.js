@@ -1,9 +1,11 @@
 const connection = require("../config/db");
 
+// Retorna todos os petss
 exports.buscarTodos = (callback) => {
   connection.query("SELECT * FROM pets", callback);
 };
 
+// Retorna todos os pets disponiveis
 exports.buscarTodosDisponiveis = (callback) => {
   connection.query("Select * from pets where status = 'available';", callback);
 };

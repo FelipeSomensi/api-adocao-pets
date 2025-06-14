@@ -1,0 +1,36 @@
+@baseURL = http://localhost:3000/users
+### 🔹 Listar todos os jogadores
+
+GET {{baseURL}}
+Content-Type: application/json
+
+### 🔸 Adicionar um novo pet
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+    "name": "Ana Souzaa",
+    "email": "ana.souza@email.com",
+    "phone": "11987654321",
+    "role": "admin"
+}
+
+### 🔹 Buscar usuário por ID (Substitua :id por um ID existente)
+GET {{baseURL}}/1
+Content-Type: application/json
+
+### 🔹 Atualizar usuário por ID (Substitua :id por um ID existente)
+PUT {{baseURL}}/1
+Content-Type: application/json
+
+{
+    "name": "Ana Souzaa",
+    "email": "ana.souza@email.com",
+    "phone": "11987654321",
+    "role": "admin"
+}
+
+### 🔹 Deletar usuário por ID (Substitua :id por um ID existente)
+
+DELETE {{baseURL}}/1
+Content-Type: application/json
