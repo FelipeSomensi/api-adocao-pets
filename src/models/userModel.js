@@ -11,18 +11,15 @@ exports.buscarPorId = (id, callback) => {
   connection.query(sql, [id], callback);
 };
 
-// Insere um novo user  //Verificar problema
+// Insere um novo user
+// Insere um novo user
 exports.inserir = (dados, callback) => {
-  const { name, email, phone, role } = dados;
+  const { name, email, phone, role, password } = dados;
   const sql = `
-        INSERT INTO pets (name, email, phone, role) 
-        VALUES (?, ?, ?, ?)
-    `;
-  connection.query(
-    sql,
-    [name, email, phone, role],
-    callback
-  );
+    INSERT INTO users (name, email, phone, role, password) 
+    VALUES (?, ?, ?, ?, ?)
+  `;
+  connection.query(sql, [name, email, phone, role, password], callback);
 };
 
 // Atualiza um user existente com base no ID

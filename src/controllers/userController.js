@@ -20,9 +20,9 @@ exports.buscarPorId = (req, res) => {
 
 // Adiciona um novo user após validar os campos
 exports.adicionar = (req, res) => {
-  const { name, email, phone, role } = req.body;
+  const { name, email, phone, role, password } = req.body;
 
-  if (!name || !email || !phone || !role) {
+  if (!name || !email || !phone || !role || !password) {
     return res.status(400).send("Todos os campos são obrigatórios.");
   }
 

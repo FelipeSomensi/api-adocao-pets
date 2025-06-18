@@ -4,7 +4,7 @@
 GET {{baseURL}}
 Content-Type: application/json
 
-### 🔸 Adicionar um novo pet
+### 🔸 Adicionar um novo usuario
 POST {{baseURL}}
 Content-Type: application/json
 
@@ -12,7 +12,9 @@ Content-Type: application/json
     "name": "Ana Souzaa",
     "email": "ana.souza@email.com",
     "phone": "11987654321",
-    "role": "admin"
+    "role": "admin",
+    "password": "testetesteteste"
+    
 }
 
 ### 🔹 Buscar usuário por ID (Substitua :id por um ID existente)
@@ -32,5 +34,5 @@ Content-Type: application/json
 
 ### 🔹 Deletar usuário por ID (Substitua :id por um ID existente)
 
-DELETE {{baseURL}}/1
+DELETE {{baseURL}}/3
 Content-Type: application/json
