@@ -5,44 +5,66 @@ GET {{baseURL}}
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuYS5zb3V6YUBlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTEyNDE2MTksImV4cCI6MTc1MTI0NTIxOX0.QLLCqSw7bjLTGTys1Uhrl-69EGS4EBI1xwNKfCeVu1Q
 
-### 🔸 Adicionar um novo usuario
+### 🔸 Adicionar um novo usuario admin
 POST {{baseURL}}
 Content-Type: application/json
 
 {
-    "name": "Ana Souzaa",
+    "name": "Ana Souza",
     "email": "ana.souza@email.com",
     "phone": "11987654321",
     "role": "admin",
     "password": "teste"
 }
 
-### 🔹 Buscar usuário por ID (Substitua :id por um ID existente)
-GET {{baseURL}}/1
-Content-Type: application/json
-
-### 🔹 Atualizar usuário por ID (Substitua :id por um ID existente)
-PUT {{baseURL}}/1
+### 🔸 Adicionar um novo usuario adopter
+POST {{baseURL}}
 Content-Type: application/json
 
 {
-    "name": "Ana Souzaa",
-    "email": "ana.souza@email.com",
+    "name": "Caroline",
+    "email": "carol@email.com",
     "phone": "11987654321",
+    "role": "adopter",
+    "password": "teste1"
+}
+
+### 🔹 Buscar usuário por ID (Substitua :id por um ID existente)
+GET {{baseURL}}/8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJjYXJvbEBlbWFpbC5jb20iLCJyb2xlIjoiYWRvcHRlciIsImlhdCI6MTc1MTI0NDc2MywiZXhwIjoxNzUxMjQ4MzYzfQ.9A6dlCOc6vkr1hLnPT9nps1OqAvkzj4qGH4WULBVDig
+
+### 🔹 Atualizar usuário por ID (Substitua :id por um ID existente)
+PUT {{baseURL}}/8
+Content-Type: application/json
+
+{
+    "name": "Caroline",
+    "email": "carol@email.com",
+    "phone": "11987654999",
     "role": "admin"
 }
 
 ### 🔹 Deletar usuário por ID (Substitua :id por um ID existente)
 
-DELETE {{baseURL}}/1
+DELETE {{baseURL}}/7
 Content-Type: application/json
 
 
-### Login do novo usuário (pegar o token gerado abaixo)
+### Login do novo usuário (pegar o token gerado abaixo) admin
 POST {{baseURL}}/login
 Content-Type: application/json
 
 {
  "email": "ana.souza@email.com",
  "password": "teste"
+}
+
+### Login do novo usuário (pegar o token gerado abaixo) adopter
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+ "email": "carol@email.com",
+ "password": "teste1"
 }
