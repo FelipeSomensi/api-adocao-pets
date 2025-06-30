@@ -1,20 +1,24 @@
 const express = require("express");
 const router = express.Router();
-const userController = require("../controllers/userController");
+//Importa o middleware que valida tokens JWT em rotas protegidas
+const { authenticateToken, authorizeRole } = require('../middlewares/auth.middleware');
+const UserController = require("../controllers/userController");
 
-// Rota GET /pet - lista todos os user
-router.get("/", userController.listar);
+// Lista todos os usuários
+router.get("/", authenticateToken, authorizeRole('admin'), UserController.listar);
 
-// Busca usuário por ID (GET /users/:id)
-router.get("/:id", userController.buscarPorId);
+// Busca usuário por ID
+router.get("/:id", UserController.buscarPorId);
 
-// Atualiza usuário por ID (PUT /users/:id)
-router.put("/:id", userController.atualizar);
+// Adiciona um novo usuário
+router.post("/", UserController.register);
 
-// Deleta usuário por ID (DELETE /users/:id)
-router.delete("/:id", userController.deletar);
+// Atualiza usuário por ID
+router.put("/:id", UserController.atualizar);
 
-// Rota POST /pets - adiciona um novo pet
-router.post("/", userController.adicionar);
+// Deleta usuário por ID
+router.delete("/:id", UserController.deletar);
+
+router.post("/login" , UserController.login);
 
 module.exports = router;

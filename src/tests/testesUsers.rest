@@ -3,6 +3,7 @@
 
 GET {{baseURL}}
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuYS5zb3V6YUBlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTEyNDE2MTksImV4cCI6MTc1MTI0NTIxOX0.QLLCqSw7bjLTGTys1Uhrl-69EGS4EBI1xwNKfCeVu1Q
 
 ### 🔸 Adicionar um novo usuario
 POST {{baseURL}}
@@ -13,8 +14,7 @@ Content-Type: application/json
     "email": "ana.souza@email.com",
     "phone": "11987654321",
     "role": "admin",
-    "password": "testetesteteste"
-    
+    "password": "teste"
 }
 
 ### 🔹 Buscar usuário por ID (Substitua :id por um ID existente)
@@ -34,5 +34,15 @@ Content-Type: application/json
 
 ### 🔹 Deletar usuário por ID (Substitua :id por um ID existente)
 
-DELETE {{baseURL}}/3
+DELETE {{baseURL}}/1
 Content-Type: application/json
+
+
+### Login do novo usuário (pegar o token gerado abaixo)
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+ "email": "ana.souza@email.com",
+ "password": "teste"
+}
