@@ -43,7 +43,6 @@ class UserController {
 
   static buscarPorId(req, res) {
     const id = req.params.id;
-    console.log("teste")
     userModel.buscarPorId(id, (err, results) => {
       if (err) return res.status(500).send("Erro ao buscar usuário");
       if (results.length === 0)

@@ -12,7 +12,7 @@ Content-Type: application/json
 ### 🔹 Buscar um jogo por ID
 GET {{baseURL}}/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxMzMxMDU1LCJleHAiOjE3NTEzMzQ2NTV9.InsqETyNwUTVV3r3ynUdov2m1j1qXLoPYsNsxqHc7DY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxNDA1NDA5LCJleHAiOjE3NTE0MDkwMDl9._bKy9hKuTA6HjYLGEuxq6BGTIVS5fJjiKi8_L82Y3vI
 
 
 ### 🔸 Adicionar um novo pet

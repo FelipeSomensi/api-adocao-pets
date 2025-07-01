@@ -2,6 +2,11 @@
 CREATE DATABASE IF NOT EXISTS pets_db;
 USE pets_db;
 
+
+select * from pets;
+select * from users; 
+select * from adoptions;
+
 -- Criação da tabela users
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -11,6 +16,10 @@ CREATE TABLE users (
     phone VARCHAR(20),
     role ENUM('admin', 'adopter') NOT NULL
 );
+
+INSERT INTO users (name, email, password, phone, role) VALUES
+('Ana Souza', 'ana.souza@email.com', '$2b$10$uGk8F9UMuUQYQOJcwglvTeBflYUwQOJoM1SC/3uXGj.LKuRYjcJeW', '11987654321', 'admin'),
+('Carlos Lima', 'carlos.lima@email.com', '$2b$10$nQ5QbtGEiHkXyMQ9xtGVROG4b4fnSP8VJJ9nAat3gDVLyqp5F7ZLu', '21999887766', 'adopter');
 
 -- Criação da tabela pets
 CREATE TABLE pets (
@@ -23,6 +32,7 @@ CREATE TABLE pets (
     description TEXT
 );
 
+
 INSERT INTO pets (name, age, species, size, status, description) VALUES
 ('Thor', 3, 'Cachorro', 'large', 'available', 'Cão de grande porte, muito brincalhão e dócil.'),
 ('Luna', 2, 'Gato', 'small', 'available', 'Gata preta muito carinhosa, ideal para apartamentos.'),
@@ -34,3 +44,17 @@ INSERT INTO pets (name, age, species, size, status, description) VALUES
 ('Mimi', 3, 'Gato', 'small', 'available', 'Gatinha tricolor, adora brincar com bolinhas.'),
 ('Tico', 2, 'Pássaro', 'small', 'available', 'Canário amarelo, canta bastante.'),
 ('Lola', 1, 'Cachorro', 'medium', 'available', 'Filhote de vira-lata muito dócil e inteligente.');
+
+
+-- Criação da tabela adoptions
+CREATE TABLE adoptions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    pet_id INT NOT NULL,
+    adoption_date DATE NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (pet_id) REFERENCES pets(id)
+);
+
+INSERT INTO adoptions (user_id, pet_id, adoption_date)
+VALUES (2, 3, '2025-06-30');

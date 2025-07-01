@@ -23,7 +23,7 @@ Content-Type: application/json
 
 {
     "name": "Caroline",
-    "email": "carol@email.com",
+    "email": "carol@email.com.br",
     "phone": "11987654321",
     "role": "adopter",
     "password": "teste1"
@@ -32,7 +32,7 @@ Content-Type: application/json
 ### 🔹 Buscar usuário por ID (Substitua :id por um ID existente)
 GET {{baseURL}}/8
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJjYXJvbEBlbWFpbC5jb20iLCJyb2xlIjoiYWRvcHRlciIsImlhdCI6MTc1MTI0NDc2MywiZXhwIjoxNzUxMjQ4MzYzfQ.9A6dlCOc6vkr1hLnPT9nps1OqAvkzj4qGH4WULBVDig
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxNDA1ODI5LCJleHAiOjE3NTE0MDk0Mjl9.bXlFIrlxwjqbvHTc9jpnl95Gfc3Y5WhAR7N8zFXPiQ0
 
 ### 🔹 Atualizar usuário por ID (Substitua :id por um ID existente)
 PUT {{baseURL}}/8
