@@ -31,8 +31,6 @@ function authorizeRole(role) {
 function authorizeSelfOrAdmin(req, res, next) {
   const loggedUser = req.user;
   const requestedId = parseInt(req.params.id);
-  console.log(loggedUser.id)
-  console.log(requestedId)
 
   // Admin tem acesso a qualquer ID
   if (loggedUser.role === "admin") return next();

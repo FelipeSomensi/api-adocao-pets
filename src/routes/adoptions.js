@@ -5,6 +5,8 @@ const { authenticateToken, authorizeRole, authorizeSelfOrAdmin } = require('../m
 const adoptionController = require("../controllers/adoptionController");
 
 // Lista todos os usuários
-router.get("/", adoptionController.listar);
+router.get("/", authenticateToken, authorizeRole('admin'), adoptionController.listar);
+
+router.post("/", authenticateToken, authorizeRole('admin'), adoptionController.realizarAdocao)
 
 module.exports = router;

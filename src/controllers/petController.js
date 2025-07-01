@@ -77,10 +77,22 @@ exports.atualizar = (req, res) => {
 
 // Exclui um pet pelo ID
 exports.deletar = (req, res) => {
-  petModel.deletar(req.params.id, (err, result) => {
-    if (err) return res.status(500).send("Erro ao deletar pet.");
-    if (result.affectedRows === 0)
-      return res.status(404).send("Pet não encontrado.");
-    res.send("Pet deletado com sucesso.");
+  const id = req.params.id;
+
+  // Primeiro, busca o pet pelo ID
+  petModel.buscarPorId(id, (err, pet) => {
+    if (err) return res.status(500).send("Erro ao buscar pet.");
+    if (!pet) return res.status(404).send("Pet não encontrado.");
+
+    // Verifica se o status é diferente de 'available'
+    if (pet.status !== "available") {
+      return res.status(400).send("Não é possível deletar um pet já adotado.");
+    }
+
+    // Se estiver disponível, executa o delete
+    petModel.deletar(id, (err, result) => {
+      if (err) return res.status(500).send("Erro ao deletar pet.");
+      res.send("Pet deletado com sucesso.");
+    });
   });
 };

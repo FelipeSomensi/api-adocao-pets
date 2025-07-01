@@ -3,6 +3,7 @@
 
 GET {{baseURL}}
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxMzMxMDU1LCJleHAiOjE3NTEzMzQ2NTV9.InsqETyNwUTVV3r3ynUdov2m1j1qXLoPYsNsxqHc7DY
 
 ### 🔹 Listar todos os jogadores disponiveis
 GET {{baseURL}}/available
@@ -11,11 +12,13 @@ Content-Type: application/json
 ### 🔹 Buscar um jogo por ID
 GET {{baseURL}}/1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxMzMxMDU1LCJleHAiOjE3NTEzMzQ2NTV9.InsqETyNwUTVV3r3ynUdov2m1j1qXLoPYsNsxqHc7DY
 
 
 ### 🔸 Adicionar um novo pet
 POST {{baseURL}}
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxMzMxMDU1LCJleHAiOjE3NTEzMzQ2NTV9.InsqETyNwUTVV3r3ynUdov2m1j1qXLoPYsNsxqHc7DY
 
 {
   "name": "Miurso",
@@ -29,6 +32,7 @@ Content-Type: application/json
 ### 🔸 Atualizar um pet existente (ID = 1)
 PUT {{baseURL}}/1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxMzMxMDU1LCJleHAiOjE3NTEzMzQ2NTV9.InsqETyNwUTVV3r3ynUdov2m1j1qXLoPYsNsxqHc7DY
 
 {
   "name": "Thor",
@@ -40,5 +44,6 @@ Content-Type: application/json
 }
 
 ### 🔸 Deletar um pet (ID = 1)
-DELETE {{baseURL}}/14
+DELETE {{baseURL}}/4
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxMzMxMDU1LCJleHAiOjE3NTEzMzQ2NTV9.InsqETyNwUTVV3r3ynUdov2m1j1qXLoPYsNsxqHc7DY

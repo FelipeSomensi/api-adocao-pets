@@ -17,7 +17,7 @@ router.post("/", UserController.register);
 router.put("/:id", authenticateToken, authorizeSelfOrAdmin, UserController.atualizar, );
 
 // Deleta usuário por ID
-router.delete("/:id", authenticateToken, authorizeSelfOrAdmin, UserController.deletar);
+router.delete("/:id", authenticateToken, authorizeRole('admin'), UserController.deletar);
 
 router.post("/login" , UserController.login);
 

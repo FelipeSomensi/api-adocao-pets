@@ -3,3 +3,15 @@
 
 GET {{baseURL}}
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxMzMxMDU1LCJleHAiOjE3NTEzMzQ2NTV9.InsqETyNwUTVV3r3ynUdov2m1j1qXLoPYsNsxqHc7DY
+
+
+### 🔸 Realizar uma adoção
+POST {{baseURL}}/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJhbmEuc291emFAZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxMzMxMDU1LCJleHAiOjE3NTEzMzQ2NTV9.InsqETyNwUTVV3r3ynUdov2m1j1qXLoPYsNsxqHc7DY
+
+{
+  "userId": 2,
+  "petId": 6
+}
